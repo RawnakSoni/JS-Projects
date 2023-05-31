@@ -1,0 +1,11 @@
+#box{
+    background-color: red;
+    height: 300px;
+    width: 50%;
+}
+
+button{
+    border-radius: 3px;
+    font-style: italic;
+    color: blue;
+}

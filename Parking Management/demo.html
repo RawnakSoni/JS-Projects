@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <button onclick="v1.displayvehicle()">display</button>
+    <script>
+        class parkvehicle
+        {
+            constructor()
+            {
+                this.vehicle=[]
+            }
+            vehicledetails(VNO,VMODEL,PHONE,CNAME,CHECK_IN,CHECK_OUT)
+            {
+                var x = {
+                    VNO,
+                    VMODEL,
+                    PHONE,
+                    CNAME,
+                    CHECK_IN,
+                    CHECK_OUT:null
+                }
+                this.vehicle.push(x)
+                // console.table(this.vehicle) // use this keyword
+            }
+
+            displayvehicle()
+            {
+                console.table(this.vehicle) // use this keyword
+            }
+
+            searchvehicle(vno)
+            {
+                let data = this.vehicle.find(n=>n.VNO===vno)
+                if(data==undefined)
+                {
+                    console.log("Vehicle Not Found")
+                    return //program termination
+                }
+                console.table(data)
+            }
+
+            checkout(vno,checkoutime)
+            {
+                let data = this.vehicle.find(n=>n.VNO===vno)
+                if(data==undefined)
+                {
+                    console.log("Vehicle Not Found")
+                    return //program termination
+                }
+                let duration =(new Date(checkoutime)- new Date(data.CHECK_IN))/(1000*60)
+                let amount=0;
+                if(duration<=30)
+                {
+                    amount=30;
+                }
+                else{
+                    let extratime=duration-30
+                    amount=30+Math.ceil(extratime/30)*10
+                }
+                console.log("Vehicle Detail")
+                data.CHECK_OUT=checkoutime
+                console.table(data)
+                console.log("duration===>" + duration)
+                console.log("Billing Amount " + amount)
+            }
+
+        }
+        const v1 =new parkvehicle();
+        v1.vehicledetails("KA-01-HH-2078","Bike",1212349867,"Rudra", new Date("02 23 2023 10:00:23"))
+        v1.vehicledetails("KA-01-HH-6666","Truck",1975349861,"Veer", new Date("02 23 2023 10:00:23"))
+        v1.vehicledetails("KA-01-HH-6663","Jeep",19753498644,"Auden", new Date("02 23 2023 10:00:23"))
+        v1.vehicledetails("KA-01-HH-6662","Lemo",1975349833,"Kay", new Date("02 23 2023 10:00:23"))
+        v1.vehicledetails("KA-01-HH-6664","Car",1975349867,"Lily", new Date("02 23 2023 10:00:23"))
+        // v1.displayvehicle()
+        v1.searchvehicle("KA-01-HH-666")
+        v1.checkout("KA-01-HH-6664",new Date("02 23 2023 11:24:23"))
+    </script>
+</body>
+</html>

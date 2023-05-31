@@ -1,0 +1,31 @@
+#myinput{
+    width: 100%;
+    border-radius: 3px;
+    border: 1px solid gray;
+}
+#mytable{
+    width: 100%;
+    border: 1px solid;
+}
+.header{
+    width: 500px;
+    text-align: center;
+}
+tr{
+    width: 500px;
+    border: 1px solid;
+    text-align: center;
+}
+td{
+    color:brown;
+    width: 500px;
+    text-align: center;
+    
+}
+h1{
+    text-align: center;
+    width: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: cadetblue;
+    
+}

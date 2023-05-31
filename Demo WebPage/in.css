@@ -1,0 +1,92 @@
+#wh
+{
+    height: 100px;
+    margin: auto;
+    width: 100%;
+    background-color: white;
+}
+
+#nav
+{
+    height: 30px;
+    background-color: aliceblue;
+    width: 100%;
+}
+#nav ul
+{
+    list-style-type: none;
+}
+#wh #nav ul li
+{
+    float: left;
+    margin: auto;
+    width: 80px;
+    text-align: center;
+}
+#logo
+{
+    width: 100%;
+    background-color: black;
+    height: 80px;
+    border: 3px solid red;
+
+}
+#logo ul li
+{
+
+    float: left;
+    margin: auto;
+    padding:0%;
+    text-align: center;
+    font-size:x-large;
+    color: yellow;
+}
+#logo ul 
+{
+    list-style-type: none;
+    /* float: left; */
+    margin: auto;
+    text-align: center;
+}
+#logo ul li img
+{
+    float: left;
+    margin-left: auto
+}
+#logo ul #sr
+{
+    float: right;
+    margin:auto;
+    padding: 20px;
+}
+#logo ul #sr ul li input
+{
+
+}
+#logo ul #sr ul li button
+{
+    background-color: orange;
+    border: 2px solid orange;
+    color: white;
+}
+
+#drop ul 
+{
+    margin: auto;
+    list-style-type: none;
+    width: 100%;
+}
+#drop ul li
+{
+    float: left;
+    margin: auto;
+   padding: 40px;
+   
+}
+#drop ul li ul li{
+    display: none;
+}
+#drop ul li:hover  ul li{
+    display: block;
+}
+

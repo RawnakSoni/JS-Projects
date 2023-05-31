@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Parking Management System</title>
+</head>
+<body>
+
+    <button onclick="v1.display_details()">Display</button>
+
+    <script>
+
+        class park_vehicle
+        {
+            constructor()
+            {
+                this.vehicle=[]
+            }
+
+            vehicle_details(vno,vtype,vmodel,phno,cname,check_in,check_out)
+            {
+                var x = 
+                {
+                    vno,
+                    vtype,
+                    vmodel,
+                    phno,
+                    cname,
+                    check_in,
+                    check_out : null
+                } 
+
+                this.vehicle.push(x)
+                
+            }
+            display_details()
+            {
+                console.table(this.vehicle)
+            }
+        }
+
+        const v1 = new park_vehicle()
+        v1.vehicle_details("RJ-06-QS-2696","Bike","Bajaj V15",8107600000,"raw",new Date())
+        v1.vehicle_details("RJ-06-QS-2696","Bike","Bajaj V15",8107600000,"raw",new Date())
+        v1.vehicle_details("RJ-06-QS-2696","Bike","Bajaj V15",8107600000,"raw",new Date())
+        v1.vehicle_details("RJ-06-QS-2696","Bike","Bajaj V15",8107600000,"raw",new Date())
+        v1.vehicle_details("RJ-06-QS-2696","Bike","Bajaj V15",8107600000,"raw",new Date())
+        v1.vehicle_details("RJ-06-QS-2696","Bike","Bajaj V15",8107600000,"raw",new Date())
+        // v1.display_details()
+
+
+    </script>
+    
+</body>
+</html>
